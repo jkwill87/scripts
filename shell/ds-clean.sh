@@ -5,5 +5,5 @@
 
 # ------------------------------------------------------------------------------
 
-[ $# -eq 0 ] && echo 'usage ds-clean PATHS' && return
+[ $# -eq 0 ] && echo 'usage ds-clean PATHS' & exit
 sudo find "$@" -name '.DS_Store' -type f -delete
