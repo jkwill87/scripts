@@ -13,12 +13,15 @@ help:
 all: bash shell python
 
 bash:
+	mkdir -p ${HOME}/bin
 	$(call deploy,$@)
 
 shell:
+	mkdir -p ${HOME}/bin
 	$(call deploy,$@)
 
 python:
+	mkdir -p ${HOME}/bin
 	$(call deploy,$@)
 
 .PHONY: bash shell python all
