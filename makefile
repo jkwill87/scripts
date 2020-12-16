@@ -10,18 +10,22 @@ chmod +x ${HOME}/bin/$(notdir $(basename $(script)));)
 help:
 	@echo 'usage: make [bash, shell, python, all]'
 
-all: bash shell python
+all: bash shell python git
 
 bash:
-	mkdir -p ${HOME}/bin
+	@mkdir -p ${HOME}/bin
 	$(call deploy,$@)
 
 shell:
-	mkdir -p ${HOME}/bin
+	@mkdir -p ${HOME}/bin
 	$(call deploy,$@)
 
 python:
-	mkdir -p ${HOME}/bin
+	@mkdir -p ${HOME}/bin
 	$(call deploy,$@)
 
-.PHONY: bash shell python all
+git:
+	@mkdir -p ${HOME}/bin
+	$(call deploy,$@)
+
+.PHONY: bash shell python git all
